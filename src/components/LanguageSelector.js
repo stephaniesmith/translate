@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import LanguageContext from '../contexts/LanguageContext';
 
 export class LanguageSelector extends Component {
+  static contextType = LanguageContext;
 
   render() {
-    const { onLanguageChange } = this.props;
+    const { onLanguageChange } = this.context;
+    
     return (
       <div>
         Select a language: 
